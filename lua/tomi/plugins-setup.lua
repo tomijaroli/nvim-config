@@ -11,10 +11,10 @@ end
 local packer_bootstrap = ensure_packer()
 
 vim.cmd([[ 
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
-  augroup end
+    augroup packer_user_config
+        autocmd!
+        autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+    augroup end
 ]])
 
 local status, packer = pcall(require, "packer")
