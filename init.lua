@@ -1,3 +1,5 @@
+require("tomi.core.globals")
+
 require("tomi.plugins-setup")
 require("tomi.core.options")
 require("tomi.core.keymaps")

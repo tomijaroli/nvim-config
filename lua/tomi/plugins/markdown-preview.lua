@@ -3,6 +3,4 @@ if not status then
 	return
 end
 
-vim.g.mkdp_auto_start = 1
-
 markdown.setup()
