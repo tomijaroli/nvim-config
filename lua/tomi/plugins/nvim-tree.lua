@@ -15,16 +15,16 @@ nvimtree.setup({
             glyphs = {
                 folder = {
                     arrow_closed = "", -- arrow when folder is closed
-                    arrow_open = "" -- arrow when folder is open
-                }
-            }
-        }
+                    arrow_open = "", -- arrow when folder is open
+                },
+            },
+        },
     },
     actions = {
         open_file = {
             window_picker = {
-                enable = false
-            }
-        }
-    }
+                enable = false,
+            },
+        },
+    },
 })

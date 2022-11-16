@@ -9,12 +9,12 @@ local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
-    sources = {formatting.prettier, formatting.stylua, diagnostics.eslint_d},
+    sources = { formatting.prettier, formatting.stylua, diagnostics.eslint_d },
     on_attach = function(current_client, bufnr)
         if current_client.supports_method("textDocument/formatting") then
             vim.api.nvim_clear_autocmds({
                 group = augroup,
-                buffer = bufnr
+                buffer = bufnr,
             })
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
@@ -24,10 +24,10 @@ null_ls.setup({
                         filter = function(client)
                             return client.name == "null-ls"
                         end,
-                        bufnr = bufnr
+                        bufnr = bufnr,
                     })
-                end
+                end,
             })
         end
-    end
+    end,
 })

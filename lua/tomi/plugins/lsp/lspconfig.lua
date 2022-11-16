@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
     local opts = {
         noremap = true,
         silent = true,
-        buffer = bufnr
+        buffer = bufnr,
     }
 
     -- set keybinds
@@ -46,19 +46,19 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 
 lspconfig["html"].setup({
     capabilities = capabilities,
-    on_attach = on_attach
+    on_attach = on_attach,
 })
 
 typescript.setup({
     server = {
         capabilities = capabilities,
-        on_attach = on_attach
-    }
+        on_attach = on_attach,
+    },
 })
 
 lspconfig["cssls"].setup({
     capabilities = capabilities,
-    on_attach = on_attach
+    on_attach = on_attach,
 })
 
 lspconfig["sumneko_lua"].setup({
@@ -67,14 +67,14 @@ lspconfig["sumneko_lua"].setup({
     settings = {
         Lua = {
             diagnostics = {
-                globals = {"vim"}
+                globals = { "vim" },
             },
             workspace = {
                 library = {
                     [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true
-                }
-            }
-        }
-    }
+                    [vim.fn.stdpath("config") .. "/lua"] = true,
+                },
+            },
+        },
+    },
 })

@@ -29,10 +29,10 @@ mason_lspconfig.setup({
         "kotlin_language_server",
         "ruby_ls",
         "pyright",
-        "yamlls"
-    }
+        "yamlls",
+    },
 })
 
 mason_null_ls.setup({
-    ensure_installed = {"prettier", "stylua", "eslint_d"}
+    ensure_installed = { "prettier", "stylua", "eslint_d" },
 })

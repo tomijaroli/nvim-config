@@ -5,13 +5,13 @@ end
 
 treesitter.setup({
     highlight = {
-        enable = true
+        enable = true,
     },
     indent = {
-        enable = true
+        enable = true,
     },
     autotag = {
-        enable = true
+        enable = true,
     },
     ensure_installed = {
         "json",
@@ -28,7 +28,7 @@ treesitter.setup({
         "lua",
         "vim",
         "dockerfile",
-        "gitignore"
+        "gitignore",
     },
-    auto_install = true
+    auto_install = true,
 })
