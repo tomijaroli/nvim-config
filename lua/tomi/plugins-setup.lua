@@ -31,6 +31,9 @@ return packer.startup(function(use)
 	-- preferred colorscheme
 	use("bluz71/vim-nightfly-guicolors")
 
+	-- color highlighting for hex codes
+	use("norcalli/nvim-colorizer.lua")
+
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 
@@ -105,6 +108,19 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+	
+	-- which key panel that shows shortcuts
+	use("folke/which-key.nvim")
+
+	-- dap - debugger adapter protocol
+	-- see https://github.com/mfussenegger/nvim-dap for documentation and settings
+	-- https://github.com/rcarriga/nvim-dap-ui
+	-- https://github.com/Pocco81/dap-buddy.nvim
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+
+	-- indent lines
+	use("lukas-reineke/indent-blankline.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
