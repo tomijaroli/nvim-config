@@ -108,7 +108,7 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-	
+
 	-- which key panel that shows shortcuts
 	use("folke/which-key.nvim")
 
