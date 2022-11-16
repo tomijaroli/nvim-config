@@ -4,9 +4,12 @@ if not saga_status then
 end
 
 saga.init_lsp_saga({
-    move_in_saga = { prev = "<C-k>", next = "<C-j>" },
+    move_in_saga = {
+        prev = "<C-k>",
+        next = "<C-j>"
+    },
     finder_action_keys = {
-        open = "<CR>",
+        open = "<CR>"
     },
     definition_action_keys = {
         edit = "<CR>"

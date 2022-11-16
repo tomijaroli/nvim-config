@@ -16,7 +16,11 @@ end
 local keymap = vim.keymap
 
 local on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true, buffer = bufnr }
+    local opts = {
+        noremap = true,
+        silent = true,
+        buffer = bufnr
+    }
 
     -- set keybinds
     keymap.set("n", "gF", "<cmd>Lspsaga lsp_finder<CR>", opts)
@@ -63,7 +67,7 @@ lspconfig["sumneko_lua"].setup({
     settings = {
         Lua = {
             diagnostics = {
-                globals = { "vim" }
+                globals = {"vim"}
             },
             workspace = {
                 library = {

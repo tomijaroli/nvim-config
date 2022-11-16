@@ -7,7 +7,9 @@ opt.number = true
 -- tabs & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
+opt.softtabstop = 0
 opt.expandtab = true
+opt.smarttab = true
 opt.autoindent = true
 
 -- line wrapping

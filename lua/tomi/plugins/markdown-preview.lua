@@ -1,6 +1,6 @@
 local status, markdown = pcall(require, "markdown-preview")
 if not status then
-	return
+    return
 end
 
 markdown.setup()
