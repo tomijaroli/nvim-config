@@ -32,6 +32,9 @@ return packer.startup(function(use)
     -- preferred colorscheme
     use("bluz71/vim-nightfly-guicolors")
 
+    -- tokyonight coloscheme
+    use("folke/tokyonight.nvim")
+
     -- color highlighting for hex codes
     use("norcalli/nvim-colorizer.lua")
 
