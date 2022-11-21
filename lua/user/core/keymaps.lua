@@ -1,29 +1,65 @@
-vim.g.mapleader = " "
+local opts = { noremap = true }
 
 local keymap = vim.keymap.set
 
--- general keymaps
+keymap("n", "<Space>", "", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-keymap("i", "jk", "<ESC>")
+keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)
+keymap("n", "<C-i>", "<C-i>", opts)
 
-keymap("n", "<leader>nh", ":nohl<CR>")
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
 
-keymap("n", "x", '"_x')
+-----------------
+-- Normal mode --
+-----------------
 
-keymap("n", "<leader>+", "<C-a>")
-keymap("n", "<leader>-", "<C-x>")
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width
-keymap("n", "<leader>sx", ":close<CR>") -- close current split window
-
+-- Tabs
 keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
--- plugin keymaps
+-- General keymaps
+keymap("n", "<leader>nh", ":nohl<CR>") -- clear highlights
+
+keymap("n", "x", '"_x')
+
+-- Window management
+keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width
+keymap("n", "<leader>sx", ":close<CR>") -- close current split window
+
+-- Move text up and down
+-- keymap("n", "C-S-j", "<Esc>:m .+1<CR>==gi", opts)
+-- keymap("n", "C-S-k", "<Esc>:m .-2<CR>==gi", opts)
+
+-----------------
+-- Insert mode --
+-----------------
+
+keymap("i", "jk", "<ESC>") -- quick exit to normal mode
+
+--------------------
+-- Plugin keymaps
+--------------------
+
+-- Alpha
+-- keymap("n", "<RightMouse>", ":Alpha<CR>", opts)
 
 -- nvim-tree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
