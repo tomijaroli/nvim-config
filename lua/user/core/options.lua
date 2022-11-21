@@ -1,37 +1,37 @@
 local opt = vim.opt -- for conciseness
 
--- line numbers
-opt.relativenumber = true
-opt.number = true
+local options = {
+    -- line numbers
+    relativenumber = true,
+    number = true,
+    -- tabs & indentation
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 0,
+    expandtab = true,
+    smarttab = true,
+    autoindent = true,
+    -- line wrapping
+    wrap = false,
+    smartcase = true,
+    -- cursor line
+    cursorline = true,
+    -- appearance
+    termguicolors = true,
+    background = "dark",
+    signcolumn = "yes",
+    -- backspace
+    backspace = "indent,eol,start",
+    -- split windows
+    splitright = true,
+    splitbelow = true,
+}
 
--- tabs & indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 0
-opt.expandtab = true
-opt.smarttab = true
-opt.autoindent = true
-
--- line wrapping
-opt.wrap = false
-opt.smartcase = true
-
--- cursor line
-opt.cursorline = true
-
--- appearance
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
-
--- backspace
-opt.backspace = "indent,eol,start"
+for key, value in pairs(options) do
+    opt[key] = value
+end
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
-
--- split windows
-opt.splitright = true
-opt.splitbelow = true
 
 opt.iskeyword:append("-")

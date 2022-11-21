@@ -13,7 +13,7 @@ if not typescript_status then
     return
 end
 
-local keymap = vim.keymap
+local keymap = vim.keymap.set
 
 local on_attach = function(client, bufnr)
     local opts = {
@@ -23,21 +23,21 @@ local on_attach = function(client, bufnr)
     }
 
     -- set keybinds
-    keymap.set("n", "gF", "<cmd>Lspsaga lsp_finder<CR>", opts)
-    keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-    keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
-    keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-    keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
-    keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
-    keymap.set("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
-    keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
-    keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-    keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-    keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-    keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
+    keymap("n", "gF", "<cmd>Lspsaga lsp_finder<CR>", opts)
+    keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+    keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+    keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+    keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
+    keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
+    keymap("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
+    keymap("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
+    keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+    keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+    keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+    keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
 
     if client.name == "tsserver" then
-        keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
+        keymap("n", "<leader>rf", ":TypescriptRenameFile<CR>")
     end
 end
 
