@@ -2,11 +2,14 @@ local opts = { noremap = true }
 
 local keymap = vim.keymap.set
 
+-----------------------------------
+-- Remap <leader> key to <Space> --
+-----------------------------------
+
 keymap("n", "<Space>", "", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)
 keymap("n", "<C-i>", "<C-i>", opts)
 
 -- Modes
@@ -73,3 +76,6 @@ keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
+
+-- WhichKey
+keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)
