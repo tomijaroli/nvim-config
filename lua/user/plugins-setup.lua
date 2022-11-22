@@ -1,5 +1,7 @@
+local fn = vim.fn
+
+-- Install packer automatically --
 local ensure_packer = function()
-    local fn = vim.fn
     local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
     if fn.empty(fn.glob(install_path)) > 0 then
         fn.system { "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path }
@@ -11,6 +13,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- Automatically source plugins-setup file and reload vim on save --
 vim.cmd [[ 
     augroup packer_user_config
         autocmd!
@@ -18,16 +21,31 @@ vim.cmd [[
     augroup end
 ]]
 
+-- Load packer --
 local status, packer = pcall(require, "packer")
 if not status then
     return
 end
 
+-- Display packer sync window in a floating box --
+packer.init {
+    snapshot_path = fn.stdpath "config" .. "/snapshots",
+    max_jobs = 50,
+    display = {
+        open_fn = function()
+            return require("packer.util").float { border = "rounded" }
+        end,
+        prompt_border = "rounded",
+    },
+}
+
+-- Install plugins --
 return packer.startup(function(use)
     use "wbthomason/packer.nvim"
 
     -- lua functions that many plugins use
     use "nvim-lua/plenary.nvim"
+    use "nvim-lua/popup.nvim"
 
     -- preferred colorscheme
     use "bluz71/vim-nightfly-guicolors"
@@ -80,6 +98,10 @@ return packer.startup(function(use)
     use "saadparwaiz1/cmp_luasnip"
     use "rafamadriz/friendly-snippets"
 
+    ---------
+    -- LSP --
+    ---------
+
     -- managing & installing lsp servers
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
@@ -93,6 +115,7 @@ return packer.startup(function(use)
     }
     use "jose-elias-alvarez/typescript.nvim"
     use "onsails/lspkind.nvim"
+    use "ray-x/lsp_signature.nvim"
 
     -- formatting & linting
     use "jose-elias-alvarez/null-ls.nvim"
