@@ -47,10 +47,6 @@ keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width
 keymap("n", "<leader>sx", ":close<CR>") -- close current split window
 
--- Move text up and down
--- keymap("n", "C-S-j", "<Esc>:m .+1<CR>==gi", opts)
--- keymap("n", "C-S-k", "<Esc>:m .-2<CR>==gi", opts)
-
 -----------------
 -- Insert mode --
 -----------------
