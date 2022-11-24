@@ -17,7 +17,7 @@ brew install ripgrip
 Once you have neovim installed, clone this repository into your `~/.config/` folder
 
 ```
-git@github.com:tomijaroli/nvim-config.git ~/.config/nvim
+git clone git@github.com:tomijaroli/nvim-config.git ~/.config/nvim
 ```
 
 Launch neovim, on the first start it will install all the plugins. Once the plugins are installed, quit the plugin manager by pressing 'q', then exit neovim by pressing 'q' again.
