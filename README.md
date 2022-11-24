@@ -8,10 +8,10 @@ First install neovim using **homebrew**
 brew install neovim
 ```
 
-You will also need `ripgrip` for the `telescope` plugin to work.
+You will also need `ripgrep` for the `telescope` plugin to work.
 
 ```
-brew install ripgrip
+brew install ripgrep
 ```
 
 Once you have neovim installed, clone this repository into your `~/.config/` folder
