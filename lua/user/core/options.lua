@@ -52,3 +52,34 @@ vim.cmd [[set iskeyword+=-]]
 opt.clipboard:append "unnamedplus"
 
 opt.iskeyword:append "-"
+
+function setTransparency()
+    vim.cmd [[ highlight Normal ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight NoText ctermbg=NONE guibg=NONE ctermfg=NONE guifg=NONE ]]
+    vim.cmd [[ highlight EndOfBuffer ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight EndOfFile ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight LineNr guibg=none ctermbg=none ]]
+    vim.cmd [[ highlight Folded guibg=none ctermbg=none ]]
+    vim.cmd [[ highlight SpecialKey guibg=NONE ctermbg=NONE ]]
+    vim.cmd [[ highlight VertSplit guibg=NONE ctermbg=NONE ]]
+    vim.cmd [[ highlight SignColumn guibg=NONE ctermbg=NONE ]]
+    vim.cmd [[ highlight StatusLine ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight LuaLine ctermbg=NONE guibg=NONE ]]
+end
+
+function clearBackgrounds()
+    setTransparency()
+
+    vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+        pattern = { "*" },
+        callback = function()
+            setTransparency()
+        end,
+    })
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+    callback = function()
+        clearBackgrounds()
+    end,
+})
