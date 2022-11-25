@@ -68,6 +68,7 @@ keymap("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
+keymap("n", "<leader>fF", "<cmd>Telescope find_files hidden=true<CR>")
 keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
 keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
