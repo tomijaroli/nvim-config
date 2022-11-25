@@ -15,7 +15,7 @@ end
 
 mason.setup()
 
-mason_lspconfig.setup({
+mason_lspconfig.setup {
     ensure_installed = {
         "tsserver",
         "html",
@@ -31,8 +31,8 @@ mason_lspconfig.setup({
         "pyright",
         "yamlls",
     },
-})
+}
 
-mason_null_ls.setup({
-    ensure_installed = { "prettier", "stylua", "eslint_d" },
-})
+mason_null_ls.setup {
+    ensure_installed = { "prettier", "stylua", "eslint_d", "yamlls" },
+}
