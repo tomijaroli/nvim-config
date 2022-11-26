@@ -65,6 +65,8 @@ function setTransparency()
     vim.cmd [[ highlight SignColumn guibg=NONE ctermbg=NONE ]]
     vim.cmd [[ highlight StatusLine ctermbg=NONE guibg=NONE ]]
     vim.cmd [[ highlight LuaLine ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight NvimTreeNormal guibg=NONE ctermbg=NONE ]]
+    vim.cmd [[ highlight NvimTreeEndOfBuffer guibg=NONE ctermbg=NONE ]]
 end
 
 function clearBackgrounds()

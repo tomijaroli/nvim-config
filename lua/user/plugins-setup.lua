@@ -47,8 +47,18 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim"
     use "nvim-lua/popup.nvim"
 
-    -- preferred colorscheme
-    use "bluz71/vim-nightfly-guicolors"
+    -------------------
+    -- COLOR SCHEMES --
+    -------------------
+
+    -- gruvbox colorscheme
+    use "ellisonleao/gruvbox.nvim"
+
+    -- Onedark colorscheme
+    use "navarasu/onedark.nvim"
+
+    -- Onedarker colorscheme
+    use "LunarVim/onedarker.nvim"
 
     -- tokyonight coloscheme
     use "folke/tokyonight.nvim"
