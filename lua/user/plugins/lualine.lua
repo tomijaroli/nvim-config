@@ -7,8 +7,6 @@ local theme = require("user.plugins.theme").theme()
 
 lualine.setup {
     options = {
-        component_separators = { left = "", right = "" },
-        section_separators = { left = "", right = "" },
         theme = theme,
     },
 }
