@@ -8,7 +8,7 @@ if not actions_setup then
     return
 end
 
-telescope.setup({
+telescope.setup {
     defaults = {
         mappings = {
             i = {
@@ -18,6 +18,13 @@ telescope.setup({
             },
         },
     },
-})
+    pickers = {
+        live_grep = {
+            additional_args = function(opts)
+                return { "--hidden" }
+            end,
+        },
+    },
+}
 
-telescope.load_extension("fzf")
+telescope.load_extension "fzf"
