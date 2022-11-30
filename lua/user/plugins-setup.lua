@@ -63,6 +63,12 @@ return packer.startup(function(use)
     -- tokyonight coloscheme
     use "folke/tokyonight.nvim"
 
+    -- One monokai colorscheme
+    use "fratajczak/one-monokai-vim"
+
+    -- nightfly colorscheme
+    use "bluz71/vim-nightfly-colors"
+
     -- color highlighting for hex codes
     use "norcalli/nvim-colorizer.lua"
 
