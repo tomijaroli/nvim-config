@@ -52,7 +52,7 @@ return packer.startup(function(use)
     -------------------
 
     -- gruvbox colorscheme
-    use "ellisonleao/gruvbox.nvim"
+    use "sainnhe/gruvbox-material"
 
     -- Onedark colorscheme
     use "navarasu/onedark.nvim"
@@ -68,6 +68,27 @@ return packer.startup(function(use)
 
     -- nightfly colorscheme
     use "bluz71/vim-nightfly-colors"
+
+    -- nightfox colorscheme
+    use "EdenEast/nightfox.nvim"
+
+    -- papercolor colorscheme
+    use "NLKNguyen/papercolor-theme"
+
+    -- nord colorscheme by arcticicestudio
+    -- use "arcticicestudio/nord-vim"
+
+    -- nord colorscheme by shaunsingh
+    use "shaunsingh/nord.nvim"
+
+    -- tender colorscheme
+    use "jacoborus/tender.vim"
+
+    -- iceberg colorscheme
+    use "cocopon/iceberg.vim"
+
+    -- everforest colorscheme
+    use "sainnhe/everforest"
 
     -- color highlighting for hex codes
     use "norcalli/nvim-colorizer.lua"
