@@ -44,24 +44,24 @@ end
 -- used to enable autocompletion
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
-lspconfig["html"].setup({
+lspconfig["html"].setup {
     capabilities = capabilities,
     on_attach = on_attach,
-})
+}
 
-typescript.setup({
+typescript.setup {
     server = {
         capabilities = capabilities,
         on_attach = on_attach,
     },
-})
+}
 
-lspconfig["cssls"].setup({
+lspconfig["cssls"].setup {
     capabilities = capabilities,
     on_attach = on_attach,
-})
+}
 
-lspconfig["sumneko_lua"].setup({
+lspconfig["sumneko_lua"].setup {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
@@ -71,10 +71,10 @@ lspconfig["sumneko_lua"].setup({
             },
             workspace = {
                 library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
+                    [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                    [vim.fn.stdpath "config" .. "/lua"] = true,
                 },
             },
         },
     },
-})
+}

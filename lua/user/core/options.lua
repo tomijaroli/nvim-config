@@ -1,3 +1,4 @@
+vim.cmd "autocmd!"
 local opt = vim.opt -- for conciseness
 
 local options = {
@@ -30,28 +31,43 @@ local options = {
     numberwidth = 4, -- set number column width to 2 {default 4}
     signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
     wrap = false, -- display lines as one long line
+    breakindent = true,
     scrolloff = 8, -- is one of my fav
     sidescrolloff = 8,
     title = true,
     backspace = "indent,eol,start",
+    shell = "zsh",
+    inccommand = "split",
+    wildoptions = "pum",
+    pumblend = 10,
 }
 
 for key, value in pairs(options) do
     opt[key] = value
 end
 
+local appends = {
+    shortmess = "c",
+    path = { "**" },
+    clipboard = "unnamedplus",
+    iskeyword = "-",
+}
+
+for key, value in pairs(appends) do
+    opt[key]:append(value)
+end
+
+vim.scriptencoding = "utf-8"
+vim.wo.number = true
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.opt.fillchars.eob = " "
-vim.opt.shortmess:append "c"
+opt.fillchars.eob = " "
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 
--- clipboard
-opt.clipboard:append "unnamedplus"
-
-opt.iskeyword:append "-"
+-- vim.highlight.create("Comment", { cterm = "italic", gui = "italic" }, true)
 
 function setTransparency()
     vim.cmd [[ highlight Normal ctermbg=NONE guibg=NONE ]]

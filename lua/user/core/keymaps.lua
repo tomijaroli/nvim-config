@@ -31,15 +31,16 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Tabs
-keymap("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap("n", "<leader>tn", ":tabn<CR>") -- go to next tab
-keymap("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
+keymap("n", "<leader>to", ":tabnew<CR>", { silent = true }) -- open new tab
+keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true }) -- close current tab
+keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", {}) -- go to next tab
+keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", {}) -- go to previous tab
 
 -- General keymaps
 keymap("n", "<leader>nh", ":nohl<CR>") -- clear highlights
 
 keymap("n", "x", '"_x')
+keymap("n", "<C-a>", "gg<S-v>G") -- select all
 
 -- Window management
 keymap("n", "<leader>sv", "<C-w>v") -- split window vertically

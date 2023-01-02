@@ -75,11 +75,15 @@ return packer.startup(function(use)
     -- papercolor colorscheme
     use "NLKNguyen/papercolor-theme"
 
-    -- nord colorscheme by arcticicestudio
-    -- use "arcticicestudio/nord-vim"
+    -- -- nord colorscheme by shaunsingh
+    -- use "shaunsingh/nord.nvim"
+    use "arcticicestudio/nord-vim"
 
-    -- nord colorscheme by shaunsingh
-    use "shaunsingh/nord.nvim"
+    -- neosolarized colorscheme
+    use {
+        "svrana/neosolarized.nvim",
+        requires = { "tjdevries/colorbuddy.nvim" },
+    }
 
     -- tender colorscheme
     use "jacoborus/tender.vim"
@@ -89,6 +93,12 @@ return packer.startup(function(use)
 
     -- everforest colorscheme
     use "sainnhe/everforest"
+
+    -- icons
+    use "kyazdani42/nvim-web-devicons"
+
+    -- statusline
+    use "nvim-lualine/lualine.nvim"
 
     -- color highlighting for hex codes
     use "norcalli/nvim-colorizer.lua"
@@ -109,12 +119,6 @@ return packer.startup(function(use)
     -- file explorer
     use "nvim-tree/nvim-tree.lua"
 
-    -- icons
-    use "kyazdani42/nvim-web-devicons"
-
-    -- statusline
-    use "nvim-lualine/lualine.nvim"
-
     -- fuzzy finding
     use {
         "nvim-telescope/telescope-fzf-native.nvim",
@@ -125,34 +129,34 @@ return packer.startup(function(use)
         branch = "0.1.x",
     }
 
+    ---------
+    -- LSP --
+    ---------
+
+    -- configuring lsp servers
+    use "neovim/nvim-lspconfig" -- LSP
+
     -- auto completion
-    use "hrsh7th/nvim-cmp"
-    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/nvim-cmp" -- completion
+    use "hrsh7th/cmp-nvim-lsp" -- nvim-cmp source for neovim's built-in LSP
+    use "hrsh7th/cmp-buffer" -- nvim-cmp source for buffer words
     use "hrsh7th/cmp-path"
+    use "onsails/lspkind.nvim" -- icons and pictograms for completion window
 
     -- snippets
     use "L3MON4D3/LuaSnip"
     use "saadparwaiz1/cmp_luasnip"
     use "rafamadriz/friendly-snippets"
 
-    ---------
-    -- LSP --
-    ---------
-
-    -- managing & installing lsp servers
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-
-    -- configuring lsp servers
-    use "neovim/nvim-lspconfig"
-    use "hrsh7th/cmp-nvim-lsp"
     use {
         "glepnir/lspsaga.nvim",
         branch = "main",
     }
     use "jose-elias-alvarez/typescript.nvim"
-    use "onsails/lspkind.nvim"
-    use "ray-x/lsp_signature.nvim"
+
+    -- managing & installing lsp servers
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
 
     -- formatting & linting
     use "jose-elias-alvarez/null-ls.nvim"
@@ -173,8 +177,12 @@ return packer.startup(function(use)
     use "windwp/nvim-autopairs"
     use "windwp/nvim-ts-autotag"
 
+    -- bufferline for tabs
+    use "akinsho/bufferline.nvim"
+
     -- git signs plugin
     use "lewis6991/gitsigns.nvim"
+    use "dinhhuy258/git.nvim"
 
     -- install markdown-preview
     use {
@@ -191,8 +199,8 @@ return packer.startup(function(use)
     -- see https://github.com/mfussenegger/nvim-dap for documentation and settings
     -- https://github.com/rcarriga/nvim-dap-ui
     -- https://github.com/Pocco81/dap-buddy.nvim
-    use "mfussenegger/nvim-dap"
-    use "rcarriga/nvim-dap-ui"
+    -- use "mfussenegger/nvim-dap"
+    -- use "rcarriga/nvim-dap-ui"
 
     -- indent lines
     use "lukas-reineke/indent-blankline.nvim"
