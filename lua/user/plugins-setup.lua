@@ -94,6 +94,9 @@ return packer.startup(function(use)
     -- everforest colorscheme
     use "sainnhe/everforest"
 
+    -- TODO comments highlighting
+    use "folke/todo-comments.nvim"
+
     -- icons
     use "kyazdani42/nvim-web-devicons"
 
