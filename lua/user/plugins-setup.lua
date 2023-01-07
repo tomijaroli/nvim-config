@@ -51,20 +51,17 @@ return packer.startup(function(use)
     -- COLOR SCHEMES --
     -------------------
 
+    -- everforest colorscheme
+    use "sainnhe/everforest"
+
     -- gruvbox colorscheme
     use "sainnhe/gruvbox-material"
-
-    -- Onedark colorscheme
-    use "navarasu/onedark.nvim"
-
-    -- Onedarker colorscheme
-    use "LunarVim/onedarker.nvim"
 
     -- tokyonight coloscheme
     use "folke/tokyonight.nvim"
 
-    -- One monokai colorscheme
-    use "fratajczak/one-monokai-vim"
+    -- iceberg colorscheme
+    use "cocopon/iceberg.vim"
 
     -- nightfly colorscheme
     use "bluz71/vim-nightfly-colors"
@@ -72,27 +69,11 @@ return packer.startup(function(use)
     -- nightfox colorscheme
     use "EdenEast/nightfox.nvim"
 
-    -- papercolor colorscheme
-    use "NLKNguyen/papercolor-theme"
-
-    -- -- nord colorscheme by shaunsingh
-    -- use "shaunsingh/nord.nvim"
+    -- nord colorscheme by arcticicestudio
     use "arcticicestudio/nord-vim"
-
-    -- neosolarized colorscheme
-    use {
-        "svrana/neosolarized.nvim",
-        requires = { "tjdevries/colorbuddy.nvim" },
-    }
 
     -- tender colorscheme
     use "jacoborus/tender.vim"
-
-    -- iceberg colorscheme
-    use "cocopon/iceberg.vim"
-
-    -- everforest colorscheme
-    use "sainnhe/everforest"
 
     -- TODO comments highlighting
     use "folke/todo-comments.nvim"
@@ -118,6 +99,10 @@ return packer.startup(function(use)
 
     -- commenting with gc
     use "numToStr/Comment.nvim"
+
+    -------------------
+    -- FILE HANDLING --
+    -------------------
 
     -- file explorer
     use "nvim-tree/nvim-tree.lua"
