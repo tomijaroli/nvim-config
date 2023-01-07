@@ -40,6 +40,7 @@ local options = {
     inccommand = "split",
     wildoptions = "pum",
     pumblend = 10,
+    fcs = "eob: ",
 }
 
 for key, value in pairs(options) do
