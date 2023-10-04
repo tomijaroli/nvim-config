@@ -40,7 +40,8 @@ luac.out
 *.hex
 
 
-plugin/packer_compiled.lua
 java-debug/
 vscode-java-test/
 debug_log_file_path
+
+snapshots

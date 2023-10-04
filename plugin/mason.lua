@@ -20,6 +20,7 @@ mason_lspconfig.setup {
         "tsserver",
         "html",
         "cssls",
+        "lua_ls",
         "clangd",
         "cmake",
         "dockerls",
