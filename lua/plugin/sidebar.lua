@@ -1,9 +1,9 @@
 return {
     "nvim-tree/nvim-tree.lua",
     dependencies = {
-        "nvim-tree/nvim-web-devicons",
+        "nvim-tree/nvim-web-devicons", -- TODO: setup: default = true,
     },
-    event = "VeryLazy",
+    cmd = "NvimTreeToggle",
     keys = {
         { "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle tree" },
     },
