@@ -62,7 +62,7 @@ keymap("i", "jk", "<ESC>") -- quick exit to normal mode
 -- keymap("n", "<RightMouse>", ":Alpha<CR>", opts)
 
 -- nvim-tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<CR>")

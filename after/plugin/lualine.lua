@@ -3,7 +3,7 @@ if not status then
     return
 end
 
-local theme = require("user.core.theme").theme()
+local theme = require("core.theme").theme()
 
 lualine.setup {
     options = {
