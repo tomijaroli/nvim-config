@@ -41,7 +41,10 @@ return {
         end,
     },
     "windwp/nvim-ts-autotag",
-    "numToStr/Comment.nvim",
+    {
+        "numToStr/Comment.nvim",
+        opts = {},
+    },
     "folke/todo-comments.nvim",
     "norcalli/nvim-colorizer.lua",
     "vim-scripts/ReplaceWithRegister",
