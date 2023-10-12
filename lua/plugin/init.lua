@@ -1,7 +1,4 @@
 return {
-    -- core
-    "nvim-lua/plenary.nvim",
-    "nvim-lua/popup.nvim",
     -- color themes
     "catppuccin/nvim",
     "sainnhe/everforest",
@@ -34,14 +31,9 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     "jayp0521/mason-null-ls.nvim",
     -- misc
-    "folke/todo-comments.nvim",
     "nvim-lualine/lualine.nvim",
-    "norcalli/nvim-colorizer.lua",
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
-    "tpope/vim-surround",
-    "vim-scripts/ReplaceWithRegister",
-    "numToStr/Comment.nvim",
     {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
@@ -60,8 +52,6 @@ return {
             ts_update()
         end,
     },
-    "windwp/nvim-autopairs",
-    "windwp/nvim-ts-autotag",
     "akinsho/bufferline.nvim",
     "lewis6991/gitsigns.nvim",
     "dinhhuy258/git.nvim",
@@ -72,5 +62,4 @@ return {
         end,
     },
     "folke/which-key.nvim",
-    "lukas-reineke/indent-blankline.nvim",
 }
