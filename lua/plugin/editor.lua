@@ -45,7 +45,10 @@ return {
         "numToStr/Comment.nvim",
         opts = {},
     },
-    "folke/todo-comments.nvim",
+    {
+        "folke/todo-comments.nvim",
+        opts = {},
+    },
     "norcalli/nvim-colorizer.lua",
     "vim-scripts/ReplaceWithRegister",
 }
