@@ -49,6 +49,9 @@ return {
         "folke/todo-comments.nvim",
         opts = {},
     },
-    "norcalli/nvim-colorizer.lua",
+    {
+        "norcalli/nvim-colorizer.lua",
+        opts = {},
+    },
     "vim-scripts/ReplaceWithRegister",
 }
