@@ -1,6 +1,5 @@
 require "core.globals"
 require "core.options"
--- require "plugins-setup"
 require "core.keymaps"
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
