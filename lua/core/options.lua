@@ -74,6 +74,8 @@ vim.cmd [[set iskeyword+=-]]
 
 function setTransparency()
     vim.cmd [[ highlight Normal ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight NormalNC ctermbg=NONE guibg=NONE ]]
+    vim.cmd [[ highlight NormalSB ctermbg=NONE guibg=NONE ]]
     vim.cmd [[ highlight NoText ctermbg=NONE guibg=NONE ctermfg=NONE guifg=NONE ]]
     vim.cmd [[ highlight EndOfBuffer ctermbg=NONE guibg=NONE ]]
     vim.cmd [[ highlight EndOfFile ctermbg=NONE guibg=NONE ]]
