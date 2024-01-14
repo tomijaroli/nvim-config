@@ -30,7 +30,6 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     "jayp0521/mason-null-ls.nvim",
     -- misc
-    "nvim-lualine/lualine.nvim",
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
     "neovim/nvim-lspconfig",
