@@ -1,13 +1,4 @@
 return {
-    -- color themes
-    "sainnhe/everforest",
-    "sainnhe/gruvbox-material",
-    "folke/tokyonight.nvim",
-    "cocopon/iceberg.vim",
-    "bluz71/vim-nightfly-colors",
-    "EdenEast/nightfox.nvim",
-    "arcticicestudio/nord-vim",
-    "jacoborus/tender.vim",
     -- snippets
     {
         "glepnir/lspsaga.nvim",
