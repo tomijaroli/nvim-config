@@ -10,7 +10,6 @@ return {
     "szw/vim-maximizer",
     "akinsho/bufferline.nvim",
     "lewis6991/gitsigns.nvim",
-    "dinhhuy258/git.nvim",
     {
         "iamcco/markdown-preview.nvim",
         build = function()
