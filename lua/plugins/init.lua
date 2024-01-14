@@ -23,16 +23,12 @@ return {
         branch = "main",
     },
     "jose-elias-alvarez/typescript.nvim",
-    -- mason language server manager
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
     -- formatter
     "jose-elias-alvarez/null-ls.nvim",
     "jayp0521/mason-null-ls.nvim",
     -- misc
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
-    "neovim/nvim-lspconfig",
     "akinsho/bufferline.nvim",
     "lewis6991/gitsigns.nvim",
     "dinhhuy258/git.nvim",
