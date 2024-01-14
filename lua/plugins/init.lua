@@ -42,15 +42,6 @@ return {
         branch = "0.1.x",
     },
     "neovim/nvim-lspconfig",
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = function()
-            local ts_update = require("nvim-treesitter.install").update {
-                with_sync = true,
-            }
-            ts_update()
-        end,
-    },
     "akinsho/bufferline.nvim",
     "lewis6991/gitsigns.nvim",
     "dinhhuy258/git.nvim",
