@@ -5,6 +5,4 @@ return {
         branch = "main",
     },
     "jose-elias-alvarez/typescript.nvim",
-    -- misc
-    "christoomey/vim-tmux-navigator",
 }
