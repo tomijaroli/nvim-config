@@ -64,14 +64,5 @@ keymap("i", "jk", "<ESC>") -- quick exit to normal mode
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<CR>")
 
--- telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
-keymap("n", "<leader>fF", "<cmd>Telescope find_files hidden=true<CR>")
-keymap("n", "<leader>fs", "<cmd>Telescope live_grep<CR>")
-keymap("n", "<leader>fS", "<cmd>Telescope live_grep hidden=true<CR>")
-keymap("n", "<leader>fc", "<cmd>Telescope grep_string<CR>")
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
-
 -- WhichKey
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)

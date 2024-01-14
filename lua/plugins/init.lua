@@ -33,14 +33,6 @@ return {
     "nvim-lualine/lualine.nvim",
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
-    {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        branch = "0.1.x",
-    },
     "neovim/nvim-lspconfig",
     "akinsho/bufferline.nvim",
     "lewis6991/gitsigns.nvim",
