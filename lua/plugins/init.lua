@@ -9,11 +9,5 @@ return {
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
     "akinsho/bufferline.nvim",
-    {
-        "iamcco/markdown-preview.nvim",
-        build = function()
-            vim.fn["mkdp#util#install"]()
-        end,
-    },
     "folke/which-key.nvim",
 }
