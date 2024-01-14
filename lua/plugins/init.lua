@@ -23,9 +23,6 @@ return {
         branch = "main",
     },
     "jose-elias-alvarez/typescript.nvim",
-    -- formatter
-    "jose-elias-alvarez/null-ls.nvim",
-    "jayp0521/mason-null-ls.nvim",
     -- misc
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",

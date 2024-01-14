@@ -11,6 +11,21 @@ return {
         opts = {
             auto_install = true,
         },
+        ensure_installed = {
+            "tsserver",
+            "html",
+            "cssls",
+            "lua_ls",
+            "clangd",
+            "cmake",
+            "dockerls",
+            "emmet_ls",
+            "jsonls",
+            "kotlin_language_server",
+            "ruby_ls",
+            "pyright",
+            "yamlls",
+        },
     },
     {
         "neovim/nvim-lspconfig",
