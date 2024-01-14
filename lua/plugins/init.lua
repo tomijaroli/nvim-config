@@ -8,6 +8,4 @@ return {
     -- misc
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
-    "akinsho/bufferline.nvim",
-    "folke/which-key.nvim",
 }
