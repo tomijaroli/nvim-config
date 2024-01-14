@@ -21,4 +21,4 @@ if not status then
     return
 end
 
-lazy.setup "plugin"
+lazy.setup "plugins"
