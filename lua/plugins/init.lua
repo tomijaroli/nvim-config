@@ -7,5 +7,4 @@ return {
     "jose-elias-alvarez/typescript.nvim",
     -- misc
     "christoomey/vim-tmux-navigator",
-    "szw/vim-maximizer",
 }
