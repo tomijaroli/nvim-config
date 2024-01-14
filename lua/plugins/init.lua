@@ -9,7 +9,6 @@ return {
     "christoomey/vim-tmux-navigator",
     "szw/vim-maximizer",
     "akinsho/bufferline.nvim",
-    "lewis6991/gitsigns.nvim",
     {
         "iamcco/markdown-preview.nvim",
         build = function()
