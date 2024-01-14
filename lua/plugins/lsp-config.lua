@@ -32,19 +32,19 @@ return {
         config = function()
             local lspconfig = require "lspconfig"
             local util = require "lspconfig.util"
-            -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             lspconfig.lua_ls.setup {
-                -- capabilities = capabilities,
+                capabilities = capabilities,
             }
             lspconfig.html.setup {
-                -- capabilities = capabilities,
+                capabilities = capabilities,
             }
             lspconfig.tsserver.setup {
-                -- capabilities = capabilities,
+                capabilities = capabilities,
             }
             lspconfig.sourcekit.setup {
-                -- capabilities = capabilities,
+                capabilities = capabilities,
                 cmd = {
                     "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
                 },
@@ -56,7 +56,7 @@ return {
                 end,
             }
             lspconfig.lua_ls.setup {
-                -- capabilities = capabilities,
+                capabilities = capabilities,
                 settings = {
                     Lua = {
                         diagnostics = {

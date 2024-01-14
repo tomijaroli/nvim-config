@@ -8,16 +8,7 @@ return {
     "EdenEast/nightfox.nvim",
     "arcticicestudio/nord-vim",
     "jacoborus/tender.vim",
-    -- cmp
-    "hrsh7th/nvim-cmp", -- completion
-    "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim's built-in LSP
-    "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
-    "hrsh7th/cmp-path",
-    "onsails/lspkind.nvim", -- icons and pictograms for completion window
     -- snippets
-    "L3MON4D3/LuaSnip",
-    "saadparwaiz1/cmp_luasnip",
-    "rafamadriz/friendly-snippets",
     {
         "glepnir/lspsaga.nvim",
         branch = "main",
