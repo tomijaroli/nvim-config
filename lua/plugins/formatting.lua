@@ -42,4 +42,8 @@ return {
         "jayp0521/mason-null-ls.nvim",
         ensure_installed = { "prettier", "stylua", "eslint_d", "yamlls" },
     },
+    {
+        "gennaro-tedesco/nvim-jqx",
+        ft = { "json" },
+    }
 }
