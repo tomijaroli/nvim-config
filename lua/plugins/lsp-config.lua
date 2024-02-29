@@ -2,7 +2,9 @@ return {
     {
         "williamboman/mason.nvim",
         config = function()
-            require("mason").setup()
+            require("mason").setup({
+                PATH = "prepend"
+            })
         end,
     },
     {
@@ -46,7 +48,7 @@ return {
             lspconfig.sourcekit.setup {
                 capabilities = capabilities,
                 cmd = {
-                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+                    "/Applications/Xcode-15.0.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
                 },
                 root_dir = function(filename, _)
                     return util.root_pattern "buildServer.json"(filename)

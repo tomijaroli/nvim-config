@@ -40,7 +40,7 @@ return {
     },
     {
         "jayp0521/mason-null-ls.nvim",
-        ensure_installed = { "prettier", "stylua", "eslint_d", "yamlls" },
+        ensure_installed = { "prettier", "stylua", "eslint_d", "swift-mesonlsp", "yamlls" },
     },
     {
         "gennaro-tedesco/nvim-jqx",
