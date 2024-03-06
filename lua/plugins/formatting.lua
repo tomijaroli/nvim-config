@@ -1,6 +1,9 @@
 return {
     {
         "nvimtools/none-ls.nvim",
+        dependencies = {
+            "nvimtools/none-ls-extras.nvim",
+        },
         config = function()
             local null_ls = require "null-ls"
             local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -11,7 +14,7 @@ return {
                     null_ls.builtins.formatting.rubocop,
                     null_ls.builtins.diagnostics.rubocop,
                     null_ls.builtins.formatting.prettier,
-                    null_ls.builtins.diagnostics.eslint_d,
+                    require('none-ls.diagnostics.eslint_d'),
                 },
                 on_attach = function(current_client, bufnr)
                     if current_client.supports_method "textDocument/formatting" then
@@ -40,7 +43,7 @@ return {
     },
     {
         "jayp0521/mason-null-ls.nvim",
-        ensure_installed = { "prettier", "stylua", "eslint_d", "swift-mesonlsp", "yamlls" },
+        ensure_installed = { "prettier", "stylua", "swift-mesonlsp", "yamlls" },
     },
     {
         "gennaro-tedesco/nvim-jqx",
