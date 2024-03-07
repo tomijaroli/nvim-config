@@ -14,7 +14,7 @@ return {
                     null_ls.builtins.formatting.rubocop,
                     null_ls.builtins.diagnostics.rubocop,
                     null_ls.builtins.formatting.prettier,
-                    require('none-ls.diagnostics.eslint_d'),
+                    require "none-ls.diagnostics.eslint_d",
                 },
                 on_attach = function(current_client, bufnr)
                     if current_client.supports_method "textDocument/formatting" then
@@ -48,5 +48,5 @@ return {
     {
         "gennaro-tedesco/nvim-jqx",
         ft = { "json" },
-    }
+    },
 }
