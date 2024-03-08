@@ -1,7 +1,7 @@
 return {
     { "hrsh7th/cmp-nvim-lsp" }, -- nvim-cmp source for neovim's built-in LSP
     {
-        "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
+        "hrsh7th/cmp-buffer",   -- nvim-cmp source for buffer words
     },
     {
         "hrsh7th/cmp-path",
@@ -44,7 +44,7 @@ return {
                     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-space>"] = cmp.mapping.complete(), -- show completion suggestion
-                    ["<C-e>"] = cmp.mapping.abort(), -- close completion window
+                    ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
                     ["<CR>"] = cmp.mapping.confirm {
                         behavior = cmp.ConfirmBehavior.Replace,
                         select = false,

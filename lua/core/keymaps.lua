@@ -31,7 +31,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Tabs
-keymap("n", "<leader>to", ":tabnew<CR>", { silent = true }) -- open new tab
+keymap("n", "<leader>to", ":tabnew<CR>", { silent = true })   -- open new tab
 keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true }) -- close current tab
 keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", {}) -- go to next tab
 keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", {}) -- go to previous tab
@@ -43,10 +43,13 @@ keymap("n", "x", '"_x')
 keymap("n", "<C-a>", "gg<S-v>G") -- select all
 
 -- Window management
-keymap("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap("n", "<leader>se", "<C-w>=") -- make split windows equal width
+keymap("n", "<leader>sv", "<C-w>v")     -- split window vertically
+keymap("n", "<leader>sh", "<C-w>s")     -- split window horizontally
+keymap("n", "<leader>se", "<C-w>=")     -- make split windows equal width
 keymap("n", "<leader>sx", ":close<CR>") -- close current split window
+
+-- Editing
+keymap("n", "<leader>wt", ":set wrap!<CR>")
 
 -----------------
 -- Insert mode --
