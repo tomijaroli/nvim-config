@@ -31,25 +31,25 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Tabs
-keymap("n", "<leader>to", ":tabnew<CR>", { silent = true })   -- open new tab
-keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true }) -- close current tab
-keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", {}) -- go to next tab
-keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", {}) -- go to previous tab
+keymap("n", "<leader>to", ":tabnew<CR>", { silent = true, desc = "Open new tab" })
+keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true, desc = "Close current tab" })
+keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to next tab" })
+keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous tab" })
 
 -- General keymaps
-keymap("n", "<leader>nh", ":nohl<CR>") -- clear highlights
+keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear highlights" })
 
 keymap("n", "x", '"_x')
-keymap("n", "<C-a>", "gg<S-v>G") -- select all
+keymap("n", "gG", "gg<S-v>G", { desc = "Select all" })
 
 -- Window management
-keymap("n", "<leader>sv", "<C-w>v")     -- split window vertically
-keymap("n", "<leader>sh", "<C-w>s")     -- split window horizontally
-keymap("n", "<leader>se", "<C-w>=")     -- make split windows equal width
-keymap("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+keymap("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
+keymap("n", "<leader>se", "<C-w>=", { desc = "Make split windows equal width" })
+keymap("n", "<leader>sx", ":close<CR>", { desc = "Close current split window" })
 
 -- Editing
-keymap("n", "<leader>wt", ":set wrap!<CR>")
+keymap("n", "<leader>wt", ":set wrap!<CR>", { desc = "Toggle word wrapping" })
 
 -----------------
 -- Insert mode --
@@ -65,7 +65,7 @@ keymap("i", "jk", "<ESC>") -- quick exit to normal mode
 -- keymap("n", "<RightMouse>", ":Alpha<CR>", opts)
 
 -- vim-maximizer
-keymap("n", "<leader>sm", ":MaximizerToggle<CR>")
+keymap("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "Zoom to current window" })
 
 -- WhichKey
 keymap("n", "<C-Space>", "<cmd>WhichKey \\<leader><cr>", opts)

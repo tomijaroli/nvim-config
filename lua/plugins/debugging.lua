@@ -7,8 +7,8 @@ return {
         local dap = require "dap"
         local dapui = require "dapui"
 
-        vim.keymap.set("n", "<Leader>db", dap.toggle_breakpoint, {})
-        vim.keymap.set("n", "<Leader>dc", dap.continue, {})
+        vim.keymap.set("n", "<Leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+        vim.keymap.set("n", "<Leader>dc", dap.continue, { desc = "Continue debugger" })
 
         dap.listeners.before.attach.dapui_config = function()
             dapui.open()

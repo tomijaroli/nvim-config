@@ -2,7 +2,8 @@ return {
     "nvim-lualine/lualine.nvim",
     config = function()
         local lualine = require "lualine"
-        local theme = require("plugins.themes.lualine-theme").theme()
+        -- local theme = require("plugins.themes.lualine-theme").theme()
+        local theme = "catppuccin"
 
         lualine.setup {
             options = {
