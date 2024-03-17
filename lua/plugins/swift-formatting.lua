@@ -8,7 +8,7 @@ local function find_config()
 
     -- find .swiftformat config file in the working directory
     -- could be simplified if you keep it always in the root directory
-    local swiftFormatConfigs = vim.fn.systemlist({
+    local swiftFormatConfigs = vim.fn.systemlist {
         "find",
         vim.fn.getcwd(),
         "-maxdepth",
@@ -18,7 +18,7 @@ local function find_config()
         "-not",
         "-path",
         "*/.*/*",
-    })
+    }
     searchedForConfig = true
 
     if vim.v.shell_error ~= 0 then
@@ -38,11 +38,12 @@ end
 
 return {
     "stevearc/conform.nvim",
+    version = "v5.4.0",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-        local conform = require("conform")
+        local conform = require "conform"
 
-        conform.setup({
+        conform.setup {
             formatters_by_ft = {
                 swift = { "swiftformat_ext" },
             },
@@ -75,14 +76,14 @@ return {
                     end,
                 },
             },
-        })
+        }
 
         vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-            conform.format({
+            conform.format {
                 lsp_fallback = true,
                 async = false,
                 timeout_ms = 500,
-            })
+            }
         end, { desc = "Format file or range (in visual mode)" })
     end,
 }

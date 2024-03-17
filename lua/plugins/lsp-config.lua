@@ -1,14 +1,16 @@
 return {
     {
         "williamboman/mason.nvim",
+        version = "v1.10.0",
         config = function()
-            require("mason").setup({
-                PATH = "prepend"
-            })
+            require("mason").setup {
+                PATH = "prepend",
+            }
         end,
     },
     {
         "williamboman/mason-lspconfig.nvim",
+        version = "v1.26.0",
         lazy = false,
         opts = {
             auto_install = true,
@@ -31,6 +33,7 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
+        tag = "v0.1.7",
         config = function()
             local lspconfig = require "lspconfig"
             local util = require "lspconfig.util"

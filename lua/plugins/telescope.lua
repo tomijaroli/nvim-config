@@ -1,9 +1,16 @@
 return {
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        commit = "9ef21b2e6bb6ebeaf349a0781745549bbb870d27",
+        build = "make",
+    },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.5",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            commit = "f7adfc4b3f4f91aab6caebf42b3682945fbc35be",
+        },
         config = function()
             local telescope = require "telescope"
             local actions = require "telescope.actions"
@@ -39,6 +46,7 @@ return {
     },
     {
         "nvim-telescope/telescope-ui-select.nvim",
+        commit = "6e51d7da30bd139a6950adf2a47fda6df9fa06d2",
         config = function()
             require("telescope").setup {
                 extensions = {

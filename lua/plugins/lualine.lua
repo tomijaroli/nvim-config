@@ -1,5 +1,6 @@
 return {
     "nvim-lualine/lualine.nvim",
+    commit = "af4c3cf17206810880d2a93562e0a4c0d901c684",
     config = function()
         local lualine = require "lualine"
         -- local theme = require("plugins.themes.lualine-theme").theme()

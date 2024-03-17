@@ -1,22 +1,38 @@
 return {
-    { "hrsh7th/cmp-nvim-lsp" }, -- nvim-cmp source for neovim's built-in LSP
     {
-        "hrsh7th/cmp-buffer",   -- nvim-cmp source for buffer words
+        "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim's built-in LSP
+        version = "v.0.0.1",
+    },
+    {
+        "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
+        commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa",
     },
     {
         "hrsh7th/cmp-path",
+        commit = "91ff86cd9c29299a64f968ebb45846c485725f23",
     },
     {
         "L3MON4D3/LuaSnip",
+        version = "2.2.0",
         dependencies = {
-            "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
+            {
+                "saadparwaiz1/cmp_luasnip",
+                commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
+            },
+            {
+                "rafamadriz/friendly-snippets",
+                commit = "dcd4a586439a1c81357d5b9d26319ae218cc9479",
+            },
         },
     },
     {
         "hrsh7th/nvim-cmp",
+        version = "v0.0.1",
         dependencies = {
-            "onsails/lspkind.nvim",
+            {
+                "onsails/lspkind.nvim",
+                commit = "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf",
+            },
         },
         config = function()
             local cmp = require "cmp"
@@ -44,7 +60,7 @@ return {
                     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-space>"] = cmp.mapping.complete(), -- show completion suggestion
-                    ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
+                    ["<C-e>"] = cmp.mapping.abort(), -- close completion window
                     ["<CR>"] = cmp.mapping.confirm {
                         behavior = cmp.ConfirmBehavior.Replace,
                         select = false,

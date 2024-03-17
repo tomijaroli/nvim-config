@@ -8,7 +8,7 @@ local function find_config()
 
     -- find .swiftlint.yml config file in the working directory
     -- could be simplified if you keep it always in the root directory
-    local swiftlintConfigs = vim.fn.systemlist({
+    local swiftlintConfigs = vim.fn.systemlist {
         "find",
         vim.fn.getcwd(),
         "-maxdepth",
@@ -18,7 +18,7 @@ local function find_config()
         "-not",
         "-path",
         "*/.*/*",
-    })
+    }
     searchedForConfig = true
 
     if vim.v.shell_error ~= 0 then
@@ -37,7 +37,7 @@ local function find_config()
 end
 
 local function setup_swiftlint()
-    local lint = require("lint")
+    local lint = require "lint"
     local pattern = "[^:]+:(%d+):(%d+): (%w+): (.+)"
     local groups = { "lnum", "col", "severity", "message" }
     local defaults = { ["source"] = "swiftlint" }
@@ -55,7 +55,7 @@ local function setup_swiftlint()
             "--use-alternative-excluding",
             "--config",
             function()
-                return find_config() or os.getenv("HOME") .. "/.config/nvim/.swiftlint.yml"
+                return find_config() or os.getenv "HOME" .. "/.config/nvim/.swiftlint.yml"
             end,
         },
         stream = "stdout",
@@ -66,9 +66,10 @@ end
 
 return {
     "mfussenegger/nvim-lint",
+    commit = "03b1fc593638098a35de26d768d5f43b0fe57041",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
-        local lint = require("lint")
+        local lint = require "lint"
 
         -- setup
         setup_swiftlint()
@@ -88,5 +89,5 @@ return {
         vim.keymap.set("n", "<leader>ml", function()
             require("lint").try_lint()
         end, { desc = "Lint file" })
-    end
+    end,
 }

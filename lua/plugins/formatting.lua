@@ -1,8 +1,12 @@
 return {
     {
         "nvimtools/none-ls.nvim",
+        commit = "72e25ed4162474ef5d666525853f8a42bffd97c5",
         dependencies = {
-            "nvimtools/none-ls-extras.nvim",
+            {
+                "nvimtools/none-ls-extras.nvim",
+                commit = "c226aca7a506dd4325fb96188bffe804d24bbf18",
+            },
         },
         config = function()
             local null_ls = require "null-ls"
@@ -43,10 +47,12 @@ return {
     },
     {
         "jayp0521/mason-null-ls.nvim",
+        version = "v2.5.1",
         ensure_installed = { "prettier", "stylua", "swift-mesonlsp", "yamlls" },
     },
     {
         "gennaro-tedesco/nvim-jqx",
+        version = "v0.1.3",
         ft = { "json" },
     },
 }

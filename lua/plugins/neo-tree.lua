@@ -2,14 +2,21 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
     dependencies = {
-        "nvim-lua/plenary.nvim",
+        {
+            "nvim-lua/plenary.nvim",
+            commit = "f7adfc4b3f4f91aab6caebf42b3682945fbc35be",
+        },
         {
             "nvim-tree/nvim-web-devicons",
+            commit = "cb0c967c9723a76ccb1be0cc3a9a10e577d2f6ec",
             opts = {
                 default = true,
             },
         },
-        "MunifTanjim/nui.nvim",
+        {
+            "MunifTanjim/nui.nvim",
+            version = "v0.3.0",
+        },
     },
     opts = {
         filesystem = {
