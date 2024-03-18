@@ -2,13 +2,7 @@ local opts = { noremap = true }
 
 local keymap = vim.keymap.set
 
------------------------------------
--- Remap <leader> key to <Space> --
------------------------------------
 
-keymap("n", "<Space>", "", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 keymap("n", "<C-i>", "<C-i>", opts)
 

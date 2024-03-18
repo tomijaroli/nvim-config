@@ -61,10 +61,6 @@ end
 vim.scriptencoding = "utf-8"
 vim.wo.number = true
 
-vim.g.loaded = 1
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g.autopairs_enabled = true
 opt.fillchars.eob = " "
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
