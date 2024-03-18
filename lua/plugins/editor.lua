@@ -58,7 +58,11 @@ return {
     {
         "folke/todo-comments.nvim",
         version = "v1.1.0",
-        opts = {},
+        event = "VimEnter",
+        opts = { signs = false },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
     },
     {
         "norcalli/nvim-colorizer.lua",
