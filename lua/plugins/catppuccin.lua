@@ -6,6 +6,7 @@ return {
     lazy = false,
     config = function()
         vim.cmd.colorscheme "catppuccin-macchiato"
+        vim.cmd.hi "Comment gui=none"
     end,
 }
 
