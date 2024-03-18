@@ -2,36 +2,32 @@ local opts = { noremap = true }
 
 local keymap = vim.keymap.set
 
+-- Clear highlight on pressing <Esc> in normal mode
+keymap("n", "<Esc>", ":nohl<CR>", { desc = "Clear highlights" })
 
+-- Diagnostics keymaps
+keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
+keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+keymap("n", "<leader>de", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
+keymap("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
-keymap("n", "<C-i>", "<C-i>", opts)
-
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
------------------
--- Normal mode --
------------------
+-- Disable arrow keys in normal mode
+keymap("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+keymap("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+keymap("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+keymap("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+keymap("n", "<C-j>", "<C-w>j", { desc = "Move focus to the right window" })
+keymap("n", "<C-k>", "<C-w>k", { desc = "Move focus to the lower window" })
+keymap("n", "<C-l>", "<C-w>l", { desc = "Move focus to the upper window" })
 
 -- Tabs
 keymap("n", "<leader>to", ":tabnew<CR>", { silent = true, desc = "Open new tab" })
 keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true, desc = "Close current tab" })
 keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to next tab" })
 keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous tab" })
-
--- General keymaps
-keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear highlights" })
 
 keymap("n", "x", '"_x')
 keymap("n", "gG", "gg<S-v>G", { desc = "Select all" })
@@ -45,18 +41,7 @@ keymap("n", "<leader>sx", ":close<CR>", { desc = "Close current split window" })
 -- Editing
 keymap("n", "<leader>wt", ":set wrap!<CR>", { desc = "Toggle word wrapping" })
 
------------------
--- Insert mode --
------------------
-
 keymap("i", "jk", "<ESC>") -- quick exit to normal mode
-
---------------------
--- Plugin keymaps
---------------------
-
--- Alpha
--- keymap("n", "<RightMouse>", ":Alpha<CR>", opts)
 
 -- vim-maximizer
 keymap("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "Zoom to current window" })
