@@ -2,16 +2,17 @@ return {
     "nvim-treesitter/nvim-treesitter",
     tag = "v0.9.2",
     build = ":TSUpdate",
-    config = function()
-        local configs = require "nvim-treesitter.configs"
-        configs.setup {
-            auto_install = true,
-            highlight = { enable = true },
-            indent = { enable = true },
-            autotag = { enable = true },
-        }
-
-        local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-        parser_config.tsx.filetype_to_parsename = { "javascript", "typescript.tsx" }
+    opts = {
+        ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc" },
+        auto_install = true,
+        highlight = {
+            enable = true,
+            additional_vim_regex_highlighting = { "ruby" },
+        },
+        indent = { enable = true, disable = { "ruby" } },
+        autotag = { enable = true },
+    },
+    config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
     end,
 }
