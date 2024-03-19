@@ -46,6 +46,7 @@ local function setup_swiftlint()
         ["warning"] = vim.diagnostic.severity.WARN,
     }
 
+    ---@diagnostic disable-next-line: missing-fields
     lint.linters.swiftlint = {
         cmd = "swiftlint",
         stdin = false,
@@ -75,11 +76,12 @@ return {
         setup_swiftlint()
         lint.linters_by_ft = {
             swift = { "swiftlint" },
+            markdown = { "markdownlint" },
         }
 
         local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
-        vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost" }, {
+        vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
             group = lint_augroup,
             callback = function()
                 require("lint").try_lint()
