@@ -32,12 +32,6 @@ keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to previo
 keymap("n", "x", '"_x')
 keymap("n", "gG", "gg<S-v>G", { desc = "Select all" })
 
--- Window management
-keymap("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
-keymap("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
-keymap("n", "<leader>se", "<C-w>=", { desc = "Make split windows equal width" })
-keymap("n", "<leader>sx", ":close<CR>", { desc = "Close current split window" })
-
 -- Editing
 keymap("n", "<leader>wt", ":set wrap!<CR>", { desc = "Toggle word wrapping" })
 
