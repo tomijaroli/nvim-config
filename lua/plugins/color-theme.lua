@@ -10,8 +10,9 @@ return {
     end,
 }
 
--- Other themes:
+-- Some nice themes:
 
+-- "catppuccin/nvim",
 -- "sainnhe/everforest",
 -- "sainnhe/gruvbox-material",
 -- "folke/tokyonight.nvim",
