@@ -1,13 +1,24 @@
 return {
-    "dinhhuy258/git.nvim",
-    commit = "6b4a66f8a66e567bf27a0ef1de72cf5e338df4c3",
-    config = function()
-        local git = require "git"
-        git.setup {
-            keymaps = {
-                blame = "<leader>gB",
-                browse = "<leader>go",
-            },
-        }
-    end,
+    {
+        "tpope/vim-fugitive",
+        tag = "v3.7",
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        version = "v0.7",
+        config = function()
+            require("gitsigns").setup {
+                signs = {
+                    add = { text = "+" },
+                    change = { text = "~" },
+                    delete = { text = "_" },
+                    topdelete = { text = "‾" },
+                    changedelete = { text = "~" },
+                },
+            }
+
+            vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
+            vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
+        end,
+    },
 }
