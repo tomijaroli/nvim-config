@@ -6,6 +6,9 @@ return {
         {
             "rcarriga/nvim-notify",
             version = "v3.13.4",
+            opts = {
+                background_colour = "#000000",
+            },
         },
     },
     opts = {
