@@ -80,11 +80,6 @@ return {
             version = "v1.4.0",
             opts = {},
         },
-        {
-            "folke/neodev.nvim",
-            version = "v2.5.2",
-            opts = {},
-        },
     },
     config = function()
         vim.api.nvim_create_autocmd("LspAttach", {
