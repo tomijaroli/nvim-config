@@ -3,7 +3,7 @@ local opts = { noremap = true }
 local keymap = vim.keymap.set
 
 -- Clear highlight on pressing <Esc> in normal mode
-keymap("n", "<Esc>", ":nohl<CR>", { desc = "Clear highlights" })
+keymap("n", "<Esc>", ":nohl<CR>", { desc = "Clear highlights", silent = true })
 
 -- Diagnostics keymaps
 keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
