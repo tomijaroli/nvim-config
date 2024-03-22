@@ -21,4 +21,18 @@ return {
             vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {})
         end,
     },
+    {
+        "kdheepak/lazygit.nvim",
+        commit = "774dcecbd0b9b57be6c150adacb60ced79b11b23",
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        keys = {
+            { "lg", "<cmd>LazyGit<CR>", desc = "Open lazygit" },
+        },
+    },
 }
