@@ -14,6 +14,7 @@ return {
             -- TODO: fix ruby formatting and add swift
             formatters_by_ft = {
                 lua = { "stylua" },
+                go = { "gofumpt", "goimports_reviser", "golines" },
                 javascript = { { "prettierd", "prettier" } },
                 python = { "isort", "black" },
                 ruby = { "rubocop" },

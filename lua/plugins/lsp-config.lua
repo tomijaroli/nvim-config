@@ -89,9 +89,24 @@ return {
 
         local capabilities = vim.lsp.protocol.make_client_capabilities()
         capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+        local util = require "lspconfig.util"
 
         local servers = {
             clangd = {},
+            gopls = {
+                cmd = { "gopls" },
+                filetypes = { "go", "gomod", "gowork", "gotmpl" },
+                root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+                settings = {
+                    gopls = {
+                        completeUnimported = true,
+                        usePlaceholders = true,
+                        analyses = {
+                            unusedparams = true,
+                        },
+                    },
+                },
+            },
             html = {},
             lua_ls = {
                 settings = {
@@ -125,7 +140,6 @@ return {
             },
         }
 
-        local util = require "lspconfig.util"
         lspconfig["sourcekit"].setup {
             capabilities = capabilities,
             on_attach = onattach,
