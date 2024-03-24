@@ -9,8 +9,7 @@ return {
             options = {
                 icons_enabled = true,
                 theme = theme,
-                section_separators = { left = "", right = "" },
-                component_separators = { left = "", right = "" },
+                section_separators = "",
                 disabled_filetypes = { "packer", "NVimTree" },
                 globalstatus = true,
             },
