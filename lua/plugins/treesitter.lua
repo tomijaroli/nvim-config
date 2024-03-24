@@ -3,7 +3,7 @@ return {
     tag = "v0.9.2",
     build = ":TSUpdate",
     opts = {
-        ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc" },
+        ensure_installed = { "bash", "c", "go", "html", "lua", "markdown", "vim", "vimdoc" },
         auto_install = true,
         highlight = {
             enable = true,

@@ -104,4 +104,13 @@ return {
             }
         end,
     },
+    {
+        "olexsmir/gopher.nvim",
+        version = "v0.1.4",
+        ft = "go",
+        opts = {},
+        build = function()
+            vim.cmd [[silent! GoInstallDeps]]
+        end,
+    },
 }
