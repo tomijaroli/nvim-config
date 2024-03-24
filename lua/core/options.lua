@@ -34,7 +34,7 @@ local options = {
     sidescrolloff = 8,
     title = true,
     backspace = "indent,eol,start",
-    pumblend = 10,
+    pumblend = 0,
     fcs = "eob: ",
 }
 
