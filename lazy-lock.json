@@ -56,4 +56,5 @@
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-tmux-navigator": { "branch": "master", "commit": "38b1d0402c4600543281dc85b3f51884205674b6" },
   "which-key.nvim": { "branch": "main", "commit": "ce741eb559c924d72e3a67d2189ad3771a231414" },
+  "xcodebuild.nvim": { "branch": "main", "commit": "4ebfd0a4f1299e662a8e41370416ded90a0f3974" }
 }
