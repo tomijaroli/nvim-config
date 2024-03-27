@@ -61,7 +61,7 @@ local onattach = function(event)
 end
 return {
     "neovim/nvim-lspconfig",
-    tag = "v0.1.7",
+    commit = "6e5c78ebc9936ca74add66bda22c566f951b6ee5",
     dependencies = {
         {
             "williamboman/mason.nvim",
@@ -143,15 +143,6 @@ return {
         lspconfig["sourcekit"].setup {
             capabilities = capabilities,
             on_attach = onattach,
-            cmd = {
-                "/Applications/Xcode-15.0.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
-            },
-            root_dir = function(filename, _)
-                return util.root_pattern "buildServer.json"(filename)
-                    or util.root_pattern("*.xcodeproj", "*.xcworkspace")(filename)
-                    or util.find_git_ancestor(filename)
-                    or util.root_pattern "Package.swift"(filename)
-            end,
         }
     end,
 }
