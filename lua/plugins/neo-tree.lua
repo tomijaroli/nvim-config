@@ -34,6 +34,6 @@ return {
         },
     },
     keys = {
-        { "<leader>e", ":Neotree filesystem reveal left toggle<CR>", desc = "Toggle tree" },
+        { "<leader>e", ":Neotree filesystem reveal left toggle<CR>", desc = "Toggle tree", silent = true },
     },
 }
