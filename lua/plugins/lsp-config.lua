@@ -93,6 +93,7 @@ return {
 
         local servers = {
             clangd = {},
+            cssls = {},
             gopls = {
                 cmd = { "gopls" },
                 filetypes = { "go", "gomod", "gowork", "gotmpl" },
