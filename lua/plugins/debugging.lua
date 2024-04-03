@@ -25,6 +25,10 @@ return {
                 "leoluz/nvim-dap-go",
                 commit = "64f73400761e2d19459e664a52ea478f3a4420e7",
             },
+            {
+                "wojciech-kulik/xcodebuild.nvim",
+                version = "v3.4.0",
+            },
         },
         config = function()
             local dap = require "dap"
@@ -32,11 +36,28 @@ return {
             local masondap = require "mason-nvim-dap"
             local dapgo = require "dap-go"
 
+            local xcodebuild = require "xcodebuild.integrations.dap"
+            local codelldbPath = os.getenv "HOME" .. "/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
+            xcodebuild.setup(codelldbPath)
+
             masondap.setup {
                 automatic_setup = true,
                 handlers = {},
                 ensure_installed = { "delve" },
             }
+
+            vim.keymap.set("n", "<leader>dd", xcodebuild.build_and_debug, { desc = "Build & Debug" })
+            vim.keymap.set("n", "<leader>dr", xcodebuild.debug_without_build, { desc = "Debug Without Building" })
+            vim.keymap.set("n", "<leader>dt", xcodebuild.debug_tests, { desc = "Debug Tests" })
+            vim.keymap.set("n", "<leader>dT", xcodebuild.debug_class_tests, { desc = "Debug Class Tests" })
+            vim.keymap.set("n", "<leader>b", xcodebuild.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+            vim.keymap.set(
+                "n",
+                "<leader>B",
+                xcodebuild.toggle_message_breakpoint,
+                { desc = "Toggle Message Breakpoint" }
+            )
+            vim.keymap.set("n", "<leader>dx", xcodebuild.terminate_session, { desc = "Terminate Debugger" })
 
             vim.keymap.set("n", "<F5>", dap.continue, { desc = "Debug: Start/Continue" })
             vim.keymap.set("n", "<F1>", dap.step_into, { desc = "Debug: Step Into" })
