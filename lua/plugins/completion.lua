@@ -1,6 +1,7 @@
 return {
     {
         "hrsh7th/nvim-cmp",
+        event = "InsertEnter",
         version = "v0.0.1",
         dependencies = {
             {
@@ -67,7 +68,7 @@ return {
                     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-space>"] = cmp.mapping.complete {}, -- show completion suggestion
-                    ["<C-y>"] = cmp.mapping.confirm { select = false },
+                    ["<CR>"] = cmp.mapping.confirm { select = false, behavior = cmp.ConfirmBehavior.Replace },
                     ["<C-l>"] = cmp.mapping(function()
                         if luasnip.expand_or_locally_jumpable() then
                             luasnip.expand_or_jump()
