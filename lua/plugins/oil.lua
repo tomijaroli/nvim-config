@@ -21,5 +21,6 @@ return {
             },
         }
         vim.keymap.set("n", "-", oil.open_float, { desc = "Open parent directory" })
+        vim.keymap.set("n", "<Esc>", oil.close, { desc = "Close oil floating window" })
     end,
 }
