@@ -27,6 +27,23 @@ return {
             treesitter = true,
             treesitter_context = true,
         },
+        dim_inactive = {
+            enabled = false,
+            shade = "light",
+            percentage = 0.9,
+        },
+        custom_highlights = function(colors)
+            local searchActive = { bg = colors.red, fg = "#181825" }
+            local searchInactive = { bg = colors.peach, fg = "#000000" }
+
+            return {
+                CursorLineNr = { fg = colors.flamingo },
+                Search = searchInactive,
+                IncSearch = searchActive,
+                EndOfBuffer = { fg = colors.flamingo },
+                WinSeparator = { fg = colors.surface0, bg = colors.surface0 },
+            }
+        end,
     },
     config = function(_, opts)
         require("catppuccin").setup(opts)
