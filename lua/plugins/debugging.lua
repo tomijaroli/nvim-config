@@ -36,6 +36,13 @@ return {
             local masondap = require "mason-nvim-dap"
             local dapgo = require "dap-go"
 
+            local define = vim.fn.sign_define
+            define("DapBreakpoint", { text = "", texthl = "DiagnosticError", linehl = "", numhl = "" })
+            define("DapBreakpointRejected", { text = "", texthl = "DiagnosticError", linehl = "", numhl = "" })
+            define("DapStopped", { text = "", texthl = "DiagnosticOk", linehl = "", numhl = "" })
+            define("DapLogPoint", { text = "", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
+            define("DapLogPoint", { text = "", texthl = "DiagnosticInfo", linehl = "", numhl = "" })
+
             local xcodebuild = require "xcodebuild.integrations.dap"
             local codelldbPath = os.getenv "HOME" .. "/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
             xcodebuild.setup(codelldbPath)
