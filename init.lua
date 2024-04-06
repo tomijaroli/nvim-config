@@ -23,3 +23,5 @@ if not status then
 end
 
 lazy.setup "plugins"
+
+vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
