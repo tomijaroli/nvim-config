@@ -22,6 +22,10 @@ if not status then
     return
 end
 
-lazy.setup "plugins"
+lazy.setup("plugins", {
+    change_detection = {
+        notify = false,
+    },
+})
 
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
