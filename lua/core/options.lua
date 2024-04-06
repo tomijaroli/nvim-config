@@ -1,59 +1,71 @@
 vim.cmd "autocmd!"
-local opt = vim.opt -- for conciseness
 
-local options = {
-    number = true, -- set numbered lines
-    relativenumber = true, -- set relative numbered lines
-    mouse = "a", -- allow the mouse to be used in neovim
-    showmode = false, -- no need to show mode, there's a statusline already
-    clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-    breakindent = true,
-    undofile = true,
-    ignorecase = true, -- ignore case in search patterns
-    smartcase = true, -- smart case
-    smartindent = true,
-    expandtab = true,
-    shiftwidth = 4,
-    tabstop = 4,
-    softtabstop = 0,
-    smarttab = true,
-    autoindent = true,
-    numberwidth = 4,
-    signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-    updatetime = 250, -- faster completion
-    timeoutlen = 300, -- time to wait for a mapped sequence to complete (in milliseconds)
-    splitright = true, -- force all vertical splits to go to the right of current window
-    splitbelow = true, -- force all horizontal splits to go below current window
-    list = true,
-    listchars = { tab = "» ", trail = "·", nbsp = "␣" },
-    inccommand = "split",
-    cursorline = true, -- highlight the current line
-    scrolloff = 10,
-    hlsearch = true, -- highlight all matches on previous search pattern
-    termguicolors = true, -- set term gui colors (most terminals support this)
-    sidescrolloff = 8,
-    title = true,
-    backspace = "indent,eol,start",
-    pumblend = 0,
-    fcs = "eob: ",
-}
+-- Line number settings
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-for key, value in pairs(options) do
-    opt[key] = value
-end
+-- Indentation settings
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.softtabstop = 0
+vim.opt.smarttab = true
+vim.opt.breakindent = true
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.fcs = "eob: "
+vim.opt.fillchars.eob = " "
 
-local appends = {
-    -- path = { "**" },
-    iskeyword = "-",
-}
+-- Search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
 
-for key, value in pairs(appends) do
-    opt[key]:append(value)
-end
+-- Cursor settings
+vim.opt.cursorline = true
+
+-- Sign column settings
+vim.opt.numberwidth = 4
+vim.opt.signcolumn = "yes"
+
+-- Appearance settings
+vim.opt.termguicolors = true
+vim.opt.showmode = false
+vim.opt.title = true
+vim.opt.pumblend = 0
+
+-- Backspace settings
+vim.opt.backspace = "indent,eol,start"
+
+-- Clipboard settings
+vim.opt.clipboard = "unnamedplus"
+
+-- Window split settings
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+-- Scroll settings
+vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 8
+
+-- Completion settings
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
+vim.opt.inccommand = "split"
+
+-- Mouse settings
+vim.opt.mouse = "a"
+
+-- Undo settings
+vim.opt.undofile = true
+
+-- Appends
+vim.opt.path:append "**"
+vim.opt.iskeyword:append "-"
 
 vim.wo.number = true
-
-opt.fillchars.eob = " "
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
