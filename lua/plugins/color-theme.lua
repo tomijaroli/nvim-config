@@ -1,3 +1,12 @@
+local styles
+
+if vim.g.user_enable_transparent_background then
+    styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+    }
+end
+
 return {
     "catppuccin/nvim",
     version = "v1.6.0",
@@ -5,11 +14,8 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-        transparent_background = true,
-        styles = {
-            sidebars = "transparent",
-            floats = "transparent",
-        },
+        transparent_background = vim.g.user_enable_transparent_background,
+        styles = styles,
         integrations = {
             cmp = true,
             gitsigns = true,

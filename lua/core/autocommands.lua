@@ -29,7 +29,9 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
     callback = function()
-        clearBackgrounds()
+        if vim.g.user_enable_transparent_background then
+            clearBackgrounds()
+        end
     end,
 })
 
