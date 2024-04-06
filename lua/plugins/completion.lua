@@ -2,11 +2,9 @@ return {
     {
         "hrsh7th/nvim-cmp",
         event = "InsertEnter",
-        version = "v0.0.1",
         dependencies = {
             {
                 "L3MON4D3/LuaSnip",
-                version = "2.2.0",
                 build = (function()
                     if vim.fn.has "win32" == 1 or vim.fn.executable "make" == 0 then
                         return
@@ -16,33 +14,17 @@ return {
                 dependencies = {
                     {
                         "rafamadriz/friendly-snippets",
-                        commit = "dcd4a586439a1c81357d5b9d26319ae218cc9479",
                         config = function()
                             require("luasnip.loaders.from_vscode").lazy_load()
                         end,
                     },
                 },
             },
-            {
-                "saadparwaiz1/cmp_luasnip",
-                commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
-            },
-            {
-                "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for neovim's built-in LSP
-                version = "v.0.0.1",
-            },
-            {
-                "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
-                commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa",
-            },
-            {
-                "hrsh7th/cmp-path",
-                commit = "91ff86cd9c29299a64f968ebb45846c485725f23",
-            },
-            {
-                "onsails/lspkind.nvim",
-                commit = "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf",
-            },
+            "saadparwaiz1/cmp_luasnip",
+            "hrsh7th/cmp-nvim-lsp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "onsails/lspkind.nvim",
         },
         config = function()
             local cmp = require "cmp"
@@ -110,7 +92,6 @@ return {
     },
     {
         "olexsmir/gopher.nvim",
-        version = "v0.1.4",
         ft = "go",
         opts = {},
         build = function()

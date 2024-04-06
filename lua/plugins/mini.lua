@@ -1,6 +1,5 @@
 return {
     "echasnovski/mini.nvim",
-    version = "v0.12.0",
     config = function()
         -- Better Around/Inside textobjects
         --

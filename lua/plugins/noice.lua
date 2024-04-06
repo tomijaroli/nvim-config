@@ -1,11 +1,9 @@
 return {
     "folke/noice.nvim",
-    version = "v2.0.0",
     event = "VeryLazy",
     dependencies = {
         {
             "rcarriga/nvim-notify",
-            version = "v3.13.4",
             opts = {
                 background_colour = "#000000",
             },

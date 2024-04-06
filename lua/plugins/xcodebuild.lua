@@ -1,23 +1,10 @@
 return {
     "wojciech-kulik/xcodebuild.nvim",
-    version = "v3.4.0",
     dependencies = {
-        {
-            "nvim-telescope/telescope.nvim",
-            tag = "0.1.5",
-        },
-        {
-            "MunifTanjim/nui.nvim",
-            version = "v0.3.0",
-        },
-        {
-            "stevearc/oil.nvim",
-            version = "v2.7.0",
-        },
-        {
-            "nvim-treesitter/nvim-treesitter",
-            tag = "v0.9.2",
-        },
+        "nvim-telescope/telescope.nvim",
+        "MunifTanjim/nui.nvim",
+        "stevearc/oil.nvim",
+        "nvim-treesitter/nvim-treesitter",
     },
     config = function()
         require("xcodebuild").setup {

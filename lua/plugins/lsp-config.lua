@@ -61,23 +61,12 @@ local onattach = function(event)
 end
 return {
     "neovim/nvim-lspconfig",
-    commit = "6e5c78ebc9936ca74add66bda22c566f951b6ee5",
     dependencies = {
-        {
-            "williamboman/mason.nvim",
-            version = "v1.10.0",
-        },
-        {
-            "williamboman/mason-lspconfig.nvim",
-            version = "v1.26.0",
-        },
-        {
-            "WhoIsSethDaniel/mason-tool-installer.nvim",
-            commit = "1212fb6082b7177dde17ea65e429e027835aeb40",
-        },
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
         {
             "j-hui/fidget.nvim",
-            version = "v1.4.0",
             event = "VeryLazy",
             opts = {
                 notification = {

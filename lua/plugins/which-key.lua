@@ -1,7 +1,6 @@
 return {
     "folke/which-key.nvim",
-    version = "v1.6.0",
-    event = "VimEnter",
+    event = "VeryLazy",
     config = function()
         local which_key = require "which-key"
         which_key.setup()

@@ -1,7 +1,6 @@
 return {
     {
         "stevearc/conform.nvim",
-        version = "v5.5.0",
         opts = {
             notify_on_error = false,
             format_on_save = function(bufnr)
@@ -26,7 +25,6 @@ return {
     },
     {
         "gennaro-tedesco/nvim-jqx",
-        version = "v0.1.3",
         ft = { "json" },
     },
 }

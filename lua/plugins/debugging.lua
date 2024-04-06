@@ -1,33 +1,16 @@
 return {
     {
         "mfussenegger/nvim-dap",
-        version = "v0.7.0",
         dependencies = {
-            {
-                "williamboman/mason.nvim",
-                version = "v1.10.0",
-            },
-            {
-                "jay-babu/mason-nvim-dap.nvim",
-                version = "v2.2.2",
-            },
+            "wojciech-kulik/xcodebuild.nvim",
+            "williamboman/mason.nvim",
+            "jay-babu/mason-nvim-dap.nvim",
+            "leoluz/nvim-dap-go",
             {
                 "rcarriga/nvim-dap-ui",
-                version = "v4.0.0",
                 dependencies = {
-                    {
-                        "nvim-neotest/nvim-nio",
-                        version = "v1.8.1",
-                    },
+                    "nvim-neotest/nvim-nio",
                 },
-            },
-            {
-                "leoluz/nvim-dap-go",
-                commit = "64f73400761e2d19459e664a52ea478f3a4420e7",
-            },
-            {
-                "wojciech-kulik/xcodebuild.nvim",
-                version = "v3.4.0",
             },
         },
         config = function()

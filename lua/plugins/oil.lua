@@ -7,10 +7,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 return {
     "stevearc/oil.nvim",
-    version = "v2.7.0",
     dependencies = {
         "nvim-tree/nvim-web-devicons",
-        commit = "cb0c967c9723a76ccb1be0cc3a9a10e577d2f6ec",
     },
     opts = {},
     config = function()

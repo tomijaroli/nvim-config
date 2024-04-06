@@ -4,27 +4,16 @@ return {
         tag = "0.1.5",
         event = "VimEnter",
         dependencies = {
-            {
-                "nvim-lua/plenary.nvim",
-                commit = "f7adfc4b3f4f91aab6caebf42b3682945fbc35be",
-            },
+            "nvim-lua/plenary.nvim",
             {
                 "nvim-telescope/telescope-fzf-native.nvim",
-                commit = "9ef21b2e6bb6ebeaf349a0781745549bbb870d27",
                 build = "make",
                 cond = function()
                     return vim.fn.executable "make" == 1
                 end,
             },
-            {
-                "nvim-telescope/telescope-ui-select.nvim",
-                commit = "6e51d7da30bd139a6950adf2a47fda6df9fa06d2",
-            },
-            {
-                "nvim-tree/nvim-web-devicons",
-                commit = "cb0c967c9723a76ccb1be0cc3a9a10e577d2f6ec",
-                enabled = vim.g.have_nerd_font,
-            },
+            "nvim-telescope/telescope-ui-select.nvim",
+            "nvim-tree/nvim-web-devicons",
         },
         config = function()
             require("telescope").setup {

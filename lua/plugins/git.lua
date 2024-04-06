@@ -1,11 +1,7 @@
 return {
-    {
-        "tpope/vim-fugitive",
-        tag = "v3.7",
-    },
+    "tpope/vim-fugitive",
     {
         "lewis6991/gitsigns.nvim",
-        version = "v0.7",
         config = function()
             require("gitsigns").setup {
                 signs = {
@@ -23,7 +19,6 @@ return {
     },
     {
         "kdheepak/lazygit.nvim",
-        commit = "774dcecbd0b9b57be6c150adacb60ced79b11b23",
         cmd = {
             "LazyGit",
             "LazyGitConfig",
