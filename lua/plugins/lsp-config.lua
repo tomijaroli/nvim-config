@@ -59,6 +59,7 @@ local onattach = function(event)
         })
     end
 end
+
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -97,7 +98,6 @@ return {
         local util = require "lspconfig.util"
 
         -- Change the Diagnostic symbols in the sign column (gutter)
-        -- (not in youtube nvim video)
         local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
