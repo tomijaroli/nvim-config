@@ -29,7 +29,11 @@ keymap("n", "<leader>tx", ":tabclose<CR>", { silent = true, desc = "Close curren
 keymap("n", "<leader>tn", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to next tab" })
 keymap("n", "<leader>tp", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous tab" })
 
+-- Disable updating register for x and c
 keymap("n", "x", '"_x')
+keymap("n", "c", '"_c')
+keymap("n", "C", '"_C')
+
 keymap("n", "gG", "gg<S-v>G", { desc = "Select all" })
 
 -- Editing
