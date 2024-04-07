@@ -157,6 +157,7 @@ return {
         lspconfig["sourcekit"].setup {
             capabilities = capabilities,
             on_attach = onattach,
+            root_dir = lspconfig.util.root_pattern(".git", "Package.swift", "compile_commands.json"),
         }
     end,
 }
