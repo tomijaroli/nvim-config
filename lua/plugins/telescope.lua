@@ -18,6 +18,7 @@ return {
         },
         config = function()
             require("telescope").setup {
+                ensure_installed = { "swift" },
                 extensions = {
                     ["ui-select"] = {
                         require("telescope.themes").get_dropdown(),
