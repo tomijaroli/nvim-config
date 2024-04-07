@@ -85,7 +85,6 @@ return {
                 "nvim-dap-ui",
                 "quickfix",
                 "trouble",
-                "nvim-tree",
                 "lazy",
                 "mason",
             },
