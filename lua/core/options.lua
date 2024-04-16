@@ -1,4 +1,4 @@
-vim.cmd "autocmd!"
+-- vim.cmd "autocmd!"
 
 -- Line number settings
 vim.opt.number = true
