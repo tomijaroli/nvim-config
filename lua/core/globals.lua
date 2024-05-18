@@ -6,4 +6,4 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.autopairs_enabled = true
 vim.g.have_nerd_font = true
 vim.g.mkdp_auto_start = 1
-vim.g.user_enable_transparent_background = false
+vim.g.user_enable_transparent_background = true
