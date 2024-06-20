@@ -8,8 +8,8 @@ if vim.g.user_enable_transparent_background then
 end
 
 return {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "gbprod/nord.nvim",
+    name = "nord",
     priority = 1000,
     lazy = false,
     opts = {
@@ -51,8 +51,8 @@ return {
         end,
     },
     config = function(_, opts)
-        require("catppuccin").setup(opts)
-        vim.cmd.colorscheme "catppuccin-macchiato"
+        require("nord").setup(opts)
+        vim.cmd.colorscheme "nord"
         vim.cmd.hi "Comment gui=none"
     end,
 }
