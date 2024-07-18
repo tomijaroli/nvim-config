@@ -122,6 +122,12 @@ return {
                 },
             },
             html = {},
+            hyprls = {
+                filetypes = { "*.hl", "hypr*.conf" },
+                name = "hyprlang",
+                cmd = { "hyprls" },
+                root_dir = vim.fn.getcwd(),
+            },
             lua_ls = {
                 settings = {
                     Lua = {
