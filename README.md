@@ -1,4 +1,4 @@
-** This repo is deprecated and archived. The config has been merged to my [dotfiles repo](https://github.com/tomijaroli/dotfiles) **
+**This repo is deprecated and archived. The config has been merged to my [dotfiles repo](https://github.com/tomijaroli/dotfiles)**
 
 # Neovim config I use
 
